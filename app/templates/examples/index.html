@@ -1,0 +1,32 @@
+
+<html>
+
+<head>
+
+ 	<script src="../lib/kiwi.min.js"></script>
+  <script src="../lib/<%= pluginName%>-0.1.0.min.js"></script>
+
+  
+</head>
+<body>
+	<div id="exampleGameContainer">
+
+	</div>
+
+	<script type="text/javascript">
+
+		var MyState = new Kiwi.State("myState");
+		
+		var MyGame = new Kiwi.Game("exampleGameContainer","testGame",MyState,{plugins:["<%= pluginName%>","ParticlePack1"],renderer:Kiwi.RENDERER_WEBGL});
+
+		MyState.preload = function() {
+		};
+
+		MyState.create = function() {
+		};
+
+	</script>
+
+</body>
+
+</html>

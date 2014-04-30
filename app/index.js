@@ -33,8 +33,7 @@ var KiwipluginGenerator = yeoman.generators.Base.extend({
     }];
 
     this.prompt(prompts, function (props) {
-      this.pluginName = props.pluginName;
-
+      this.pluginName = props.pluginName.charAt(0).toUpperCase() + props.pluginName.slice(1);
       done();
     }.bind(this));
   },
@@ -50,8 +49,6 @@ var KiwipluginGenerator = yeoman.generators.Base.extend({
     this.template('gruntfile.js', 'gruntfile.js');
     this.copy('_package.json', 'package.json');
     this.copy('_bower.json', 'bower.json');
-    
-    
     
     this.template('src/plugin-name.js', 'src/' + this.pluginName + '-0.1.0.js');
     this.template('examples/index.html', 'examples/index.html');
