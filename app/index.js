@@ -23,17 +23,18 @@ var KiwipluginGenerator = yeoman.generators.Base.extend({
     this.log(this.yeoman);
 
     // replace it with a short and sweet description of your generator
-    this.log(chalk.magenta('You\'re using the fantastic Kiwiplugin generator.'));
+    this.log(chalk.magenta('You\'re using the Kiwiplugin generator.'));
 
     var prompts = [{
       type: 'input',
       name: 'pluginName',
-      message: 'What would you like to call your plugin?',
+      message: "What would you like to call your plugin? (Use CamelCase, with an initial capital and don't include the word 'plugin'. Eg ParticleEmitter, not particle-emitter-plugin)", 
       default: 'KiwiPlugin'
     }];
 
     this.prompt(prompts, function (props) {
-      this.pluginName = props.pluginName.charAt(0).toUpperCase() + props.pluginName.slice(1);
+      this.pluginName = props.pluginName;
+      this.pluginNameLower = props.pluginName.toLowerCase();
       done();
     }.bind(this));
   },
@@ -45,18 +46,20 @@ var KiwipluginGenerator = yeoman.generators.Base.extend({
     this.mkdir('lib');
     this.mkdir('src');
     this.copy('license.txt', 'license.txt');
-
-    this.template('gruntfile.js', 'gruntfile.js');
+    this.copy('.gitignore', '.gitignore');
+    this.copy('_gruntfile.js', 'gruntfile.js');
     this.copy('_package.json', 'package.json');
     this.copy('_bower.json', 'bower.json');
     
-    this.template('src/plugin-name.js', 'src/' + this.pluginName + '-0.1.0.js');
+    this.template('src/pluginname.js', 'src/' + this.pluginNameLower + '-0.1.0.js');
     this.template('examples/index.html', 'examples/index.html');
 
 
   },
 
   projectfiles: function () {
+    
+    
     this.copy('editorconfig', '.editorconfig');
     this.copy('jshintrc', '.jshintrc');
 

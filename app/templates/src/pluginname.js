@@ -22,10 +22,9 @@ Kiwi.Plugins.<%= pluginName%> = {
   * The version of this plugin.
   * @property version
   * @type String
-  * @default '1.0.0'
   * @public
   */
-  version:'0.9.0'
+  version:'0.1.0'
 
 };
 

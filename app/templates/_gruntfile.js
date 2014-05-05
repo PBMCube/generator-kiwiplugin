@@ -8,10 +8,10 @@ module.exports = function(grunt) {
     
     yuidoc: {
             compile: {
-                name: '<%= pkg.name %>',
-                description: '<%= pkg.description %>',
-                version: '<%= pkg.version %>',
-                url: '<%= pkg.homepage %>',
+                name: '<%%= pkg.name %>',
+                description: '<%%= pkg.description %>',
+                version: '<%%= pkg.version %>',
+                url: '<%%= pkg.homepage %>',
                 options: {
                     extension: '.js',                               
                     paths: 'src/',
@@ -23,7 +23,7 @@ module.exports = function(grunt) {
     uglify: {
             build: {
                 files: {
-                '<%= pluginName%>-<%= pkg.version %>.min.js': ['<%= pkg.main %>']
+                '<%%= pkg.filenameBase %>-<%%= pkg.version %>.min.js': ['<%%= pkg.main %>']
             }
         }
     },
@@ -31,7 +31,7 @@ module.exports = function(grunt) {
     concat: {
           build: {
             src:['src/*'],
-            dest: '<%= pkg.name %>-<%= pkg.version %>.js'
+            dest: '<%%= pkg.filenameBase %>-<%%= pkg.version %>.js'
           }
     },
     

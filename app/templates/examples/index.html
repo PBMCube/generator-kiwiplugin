@@ -3,8 +3,8 @@
 
 <head>
 
- 	<script src="../lib/kiwi.min.js"></script>
-  <script src="../lib/<%= pluginName%>-0.1.0.min.js"></script>
+ 	<script src="../bower_components/kiwi.js/build/kiwi.js"></script>
+  <script src="../<%= pluginNameLower%>-0.1.0.js"></script>
 
   
 </head>
@@ -17,7 +17,7 @@
 
 		var MyState = new Kiwi.State("myState");
 		
-		var MyGame = new Kiwi.Game("exampleGameContainer","testGame",MyState,{plugins:["<%= pluginName%>","ParticlePack1"],renderer:Kiwi.RENDERER_WEBGL});
+		var MyGame = new Kiwi.Game("exampleGameContainer","testGame",MyState,{plugins:["<%= pluginName%>"]});
 
 		MyState.preload = function() {
 		};

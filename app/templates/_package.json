@@ -1,6 +1,7 @@
 {
     "name": "<%= pluginName%>",
     "version": "0.1.0",
+    "filenameBase": "<%= pluginNameLower%>",
     "description": "Description for <%= pluginName%>.",
     "author": {
         "name" : "GameLab",
@@ -8,13 +9,13 @@
         },
 
     "homepage": "http://kiwijs.org/",
-    "bugs": "https://github.com/gamelab/particle-pack-1-plugin/issues",
-    "license": "GPL-2.0",
-    "licenseUrl": "https://github.com/gamelab/particle-pack-1-plugin/blob/master/license.txt",
+    "bugs": "",
+    "license": "MIT",
+    "licenseUrl": "",
 
     "repository": {
         "type": "git",
-        "url": "https://github.com/gamelab/particle-pack-1-plugin"
+        "url": ""
     },
 
     "main": "src/*.js",
