@@ -30,11 +30,19 @@ var KiwipluginGenerator = yeoman.generators.Base.extend({
       name: 'pluginName',
       message: "What would you like to call your plugin? (Use CamelCase, with an initial capital and don't include the word 'plugin'. Eg ParticleEmitter, not particle-emitter-plugin)", 
       default: 'KiwiPlugin'
+    },
+    {
+      type: 'prompt',
+      name: 'repo',
+      message: "Would you like to use the Kiwi.js dev branch? (recommended for kiwi.js devs only) ", 
+      default: false
+
     }];
 
     this.prompt(prompts, function (props) {
       this.pluginName = props.pluginName;
       this.pluginNameLower = props.pluginName.toLowerCase();
+      this.repo = (props.repo) ? "https://github.com/gamelab/kiwi.js.git#dev" : "https://github.com/gamelab/kiwi.js.git";
       done();
     }.bind(this));
   },

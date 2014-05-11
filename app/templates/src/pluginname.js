@@ -24,13 +24,24 @@ Kiwi.Plugins.<%= pluginName%> = {
   * @type String
   * @public
   */
-  version:'0.1.0'
+  version:'0.1.0',
+
+  minimumKiwiVersion:'0.7.0',
+
+  pluginDependencies: [
+    /*{
+      name:'someplugin',
+      minimumVersion:'1.1.1'
+    }*/
+
+  ]
 
 };
 
+
+
 /**
-* Registers this plugin with the Global Kiwi Plugins Manager if it is avaiable.
-* 
+* Registers this plugin with the Global Kiwi Plugins Manager.
 */
 Kiwi.PluginManager.register(Kiwi.Plugins.<%= pluginName%>);
 
