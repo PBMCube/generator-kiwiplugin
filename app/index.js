@@ -58,6 +58,7 @@ var KiwipluginGenerator = yeoman.generators.Base.extend({
     this.copy('_gruntfile.js', 'gruntfile.js');
     this.copy('_package.json', 'package.json');
     this.copy('_bower.json', 'bower.json');
+    this.copy('_README.md', 'README.md');
     
     this.template('src/pluginname.js', 'src/' + this.pluginNameLower + '-0.1.0.js');
     this.template('examples/index.html', 'examples/index.html');
