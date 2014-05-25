@@ -54,7 +54,7 @@ var KiwipluginGenerator = yeoman.generators.Base.extend({
     this.mkdir('lib');
     this.mkdir('src');
     this.copy('license.txt', 'license.txt');
-    this.copy('.gitignore', '.gitignore');
+    this.copy('_.gitignore', '.gitignore');
     this.copy('_gruntfile.js', 'gruntfile.js');
     this.copy('_package.json', 'package.json');
     this.copy('_bower.json', 'bower.json');
