@@ -4,7 +4,7 @@
   "description": "Yeoman generator for Kiwi.js plugins",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "gamelab/generator-kiwiplugin",
+  "repository": "https://github.com/gamelab/generator-kiwiplugin",
   "author": {
     "name": "",
     "email": "",
