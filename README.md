@@ -1,4 +1,4 @@
-# Kiwi.js Plugins Yeoman Generator (generator-kiwiplugin) V1.0.5
+# Kiwi.js Plugins Yeoman Generator (generator-kiwiplugin) V1.0.6
 
 > To learn what yeoman is go here: [Yeoman](http://yeoman.io) generator
 
